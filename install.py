@@ -1,0 +1,23 @@
+import os 
+import time
+os.system("clear")
+time.sleep(5)
+print("[!]Installing HciTool")
+os.system("sudo apt-get install bluetooth bluez bluez-tools rfkill rfcomm")
+os.system("sudo apt-get install bluez-firmware firmware-atheros")
+os.system("sudo systemctl start bluetooth.service")
+os.system("sudo systemctl enable bluetooth.service")
+os.system("sudo rfkill list")
+os.system("sudo rfkill unblock bluetooth")
+os.system("clear")
+time.sleep(5)
+print("[!]Installing l2ping")
+os.system("clear")
+os.system("sudo apt-get install bluez")
+os.system("sudo apk add bluez")
+os.system("pacman -S bluez-utils")
+os.system("yum install bluez")
+os.system("dnf install bluez")
+os.system("clear")
+print("[+]Installed")
+
